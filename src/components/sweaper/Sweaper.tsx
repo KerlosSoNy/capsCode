@@ -12,7 +12,7 @@ import {
 import { wrap } from "@motionone/utils";
 
 interface ParallaxProps {
-    children: any;
+    children: React.ReactNode; // Replace `any` with `React.ReactNode`
     baseVelocity: number;
 }
 
@@ -33,10 +33,7 @@ export default function ParallaxText({ children, baseVelocity = 100 }: ParallaxP
     useAnimationFrame((t, delta) => {
         let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
-        /**
-         * This is what changes the direction of the scroll once we
-         * switch scrolling directions.
-         */
+        // This changes the direction of the scroll when scrolling direction changes
         if (velocityFactor.get() < 0) {
             directionFactor.current = -1;
         } else if (velocityFactor.get() > 0) {
@@ -59,5 +56,3 @@ export default function ParallaxText({ children, baseVelocity = 100 }: ParallaxP
         </div>
     );
 }
-
-

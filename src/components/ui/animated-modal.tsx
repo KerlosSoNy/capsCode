@@ -218,19 +218,17 @@ const CloseIcon = () => {
     );
 };
 
-// Hook to detect clicks outside of a component.
-// Add it in a separate file, I've added here for simplicity
 export const useOutsideClick = (
     ref: React.RefObject<HTMLDivElement>,
-    callback: Function
+    callback: () => void // Define the callback with proper type
 ) => {
     useEffect(() => {
-        const listener = (event: any) => {
-            // DO NOTHING if the element being clicked is the target element or their children
-            if (!ref.current || ref.current.contains(event.target)) {
+        const listener = (event: MouseEvent | TouchEvent) => { // Use correct event types
+            // Do nothing if clicking the target element or its children
+            if (!ref.current || ref.current.contains(event.target as Node)) {
                 return;
             }
-            callback(event);
+            callback();
         };
 
         document.addEventListener("mousedown", listener);
@@ -242,3 +240,4 @@ export const useOutsideClick = (
         };
     }, [ref, callback]);
 };
+

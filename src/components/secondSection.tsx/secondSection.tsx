@@ -13,7 +13,7 @@ export default function SecondSection() {
                 </div>
                 <h1 className="text-[11.7vw] -mt-16 md:-mt-20 lg:-mt-32 font-bold font-clash text-white">WITHCREATIVE</h1>
             </div>
-            <p className="w-[90%] md:w-[60%]lg:w-[58%] text-white ms-3 md:ms-10 lg:ms-10">Welcome to CapsCode, where innovation meets creativity to deliver vibrant web and mobile UI/UX solutions. With over 3 years of experience, join us on a journey to discover the magic of unforgettable software development.</p>
+            <p className="w-[90%] md:w-[60%] lg:w-[58%] text-white ms-3 md:ms-10 lg:ms-10">Welcome to CapsCode, where innovation meets creativity to deliver vibrant web and mobile UI/UX solutions. With over 3 years of experience, join us on a journey to discover the magic of unforgettable software development.</p>
             <button
                 className="bg-white relative gap-4 mt-8 mb-4 text-black flex flex-row items-center justify-center w-[200px] h-[50px] rounded-full ms-10 shadow-md shadow-black"
             >

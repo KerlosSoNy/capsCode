@@ -9,7 +9,7 @@ export default function MagneticComponent({ children }: { children: React.ReactN
     const scale = useTransform(x, [0, 300], [1, 1.5]);
     const springConfig = { damping: 10, stiffness: 100 };
 
-    const handleMouseMove = (event: any) => {
+    const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
         const rect = event.currentTarget.getBoundingClientRect();
         const offsetX = event.clientX - rect.left - rect.width / 2;
         const offsetY = event.clientY - rect.top - rect.height / 2;
@@ -44,6 +44,4 @@ export default function MagneticComponent({ children }: { children: React.ReactN
             {children}
         </motion.div>
     );
-};
-
-MagneticComponent;
+}
