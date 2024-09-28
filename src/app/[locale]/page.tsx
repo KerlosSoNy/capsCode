@@ -1,7 +1,7 @@
 
 import Navbar from '@/components/navbar/Navbar';
 import SecondSection from '@/components/secondSection.tsx/secondSection';
-import { Card, Carousel } from '@/components/ui/apple-cards-carousel';
+import { Card } from '@/components/ui/apple-cards-carousel';
 import { useTranslations } from 'next-intl';
 
 const cardData = [

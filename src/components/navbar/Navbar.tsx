@@ -4,7 +4,6 @@ import Link from 'next/link'
 import React from 'react'
 import MagneticComponent from '../Magnitc/Magnitc'
 import { StartButton } from '../Buttons/start'
-import { div } from 'framer-motion/client'
 
 export default function Navbar() {
     return (
