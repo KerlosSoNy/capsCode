@@ -1,27 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+  
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.magnetic-component {
+    width: 100px;
+    height: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
   }
+
+  /* styles/globals.css */
+
+@font-face {
+  font-family: 'Clash Display';
+  font-weight: 400;
+  src: url('/fonts/ClashDisplay-Regular.woff2') format('woff2'),
+       url('/fonts/ClashDisplay-Regular.woff') format('woff'),
+       url('/fonts/ClashDisplay-Regular.ttf') format('truetype');
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: 'Clash Display';
+  font-weight: 700;
+  src: url('/fonts/ClashDisplay-Bold.woff2') format('woff2'),
+       url('/fonts/ClashDisplay-Bold.woff') format('woff'),
+       url('/fonts/ClashDisplay-Bold.ttf') format('truetype');
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@font-face {
+  font-family: 'Clash Display';
+  font-weight: 300;
+  src: url('/fonts/ClashDisplay-Light.woff2') format('woff2'),
+       url('/fonts/ClashDisplay-Light.woff') format('woff'),
+       url('/fonts/ClashDisplay-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  font-weight: 500;
+  src: url('/fonts/ClashDisplay-Medium.woff2') format('woff2'),
+       url('/fonts/ClashDisplay-Medium.woff') format('woff'),
+       url('/fonts/ClashDisplay-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  font-weight: 200;
+  src: url('/fonts/ClashDisplay-Extralight.woff2') format('woff2'),
+       url('/fonts/ClashDisplay-Extralight.woff') format('woff'),
+       url('/fonts/ClashDisplay-Extralight.ttf') format('truetype');
+}
+
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  font-size: 52px;
+  display: flex;
+  gap: 20px;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 10px;
 }
