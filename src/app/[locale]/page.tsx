@@ -1,6 +1,8 @@
 
 import Navbar from '@/components/navbar/Navbar';
 import SecondSection from '@/components/secondSection.tsx/secondSection';
+import FourthSection from '@/components/fourthSection/FourthSection';
+import TheirdSection from '@/components/theirdSection.tsx/theirdSection';
 
 
 export default function HomePage() {
@@ -9,6 +11,8 @@ export default function HomePage() {
         <div className=''>
             <Navbar />
             <SecondSection />
+            <TheirdSection />
+            <FourthSection />
         </div>
     );
 }
