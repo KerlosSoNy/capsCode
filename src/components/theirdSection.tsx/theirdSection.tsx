@@ -50,7 +50,7 @@ export default function TheirdSection() {
                     </div>
                     <div className="w-[30%] flex flex-col justify-start items-start">
                         <span className="">
-                            At CapsCode, we bring your ideas to life with a splash of creativity and innovation. Whether it's web development, mobile apps, or stunning UI/UX designs, we've got the skills to turn your vision into reality—effortlessly and with a bit of flair!
+                            {`At CapsCode, we bring your ideas to life with a splash of creativity and innovation. Whether it's web development, mobile apps, or stunning UI/UX designs, we've got the skills to turn your vision into reality—effortlessly and with a bit of flair!`}
                         </span>
                         <button className="bg-white text-black shadow-md shadow-black font-bold font-clash px-4 py-2 rounded-full mt-4">VIEW ALL</button>
                     </div>
