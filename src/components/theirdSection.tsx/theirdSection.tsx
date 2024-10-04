@@ -38,17 +38,17 @@ export default function TheirdSection() {
         <div
             className="w-full bg-white text-black mt-32">
             <div className="container mx-auto flex flex-col">
-                <div className="flex flex-row items-center justify-between">
+                <div className="flex flex-col md:flex-row items-center justify-between">
                     <div className="flex flex-col">
-                        <div className="flex flex-row items-center gap-3 mb-1">
+                        <div className="flex flex-col md:flex-row items-center gap-3 mb-1">
                             <h1 className="text-5xl font-bold font-clash">CREATIVE</h1>
                             <div className="p-1 rounded-full bg-mainColor text-white">
                                 <h1 className="text-3xl font-bold font-clash p-1 border-dashed border-white border-[1px] rounded-full px-4">SOLUTION</h1>
                             </div>
                         </div>
-                        <h1 className="text-5xl font-bold font-clash">JUST FOR YOU</h1>
+                        <h1 className="text-4xl md:text-5xl font-bold font-clash">JUST FOR YOU</h1>
                     </div>
-                    <div className="w-[30%] flex flex-col justify-start items-start">
+                    <div className="w-[90%] md:w-[30%] flex flex-col justify-center md:justify-start items-center md:items-start">
                         <span className="">
                             {`At CapsCode, we bring your ideas to life with a splash of creativity and innovation. Whether it's web development, mobile apps, or stunning UI/UX designs, we've got the skills to turn your vision into reality—effortlessly and with a bit of flair!`}
                         </span>

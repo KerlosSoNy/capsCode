@@ -23,7 +23,7 @@ export function StartButton() {
         <div className="py-40  flex items-center justify-center">
             <Modal>
                 <ModalTrigger className="bg-transparent border-[1px] border-white  !rounded-full text-white flex justify-center group/modal-btn">
-                    <span className="group-hover/modal-btn:translate-x-52 font-semibold text-center transition duration-500">
+                    <span className="group-hover/modal-btn:translate-x-52 text-xs sm:text-sm md:text-md font-semibold text-center transition duration-500">
                         START A PROJECT
                     </span>
                     <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">

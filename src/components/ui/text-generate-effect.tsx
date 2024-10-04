@@ -54,13 +54,13 @@ export const TextGenerateEffect = ({
         return (
             <motion.div
                 ref={scope}
-                className="text-2xl text-align w-[98%] md:w-[51%] mx-auto gap-2"
+                className="text-md md:text-2xl text-align w-[98%] md:w-[51%] mx-auto gap-2"
             >
                 {wordsArray.map((word, idx) => {
                     return (
                         <motion.span
                             key={word + idx}
-                            className="dark:text-black text-white text-center text-4xl opacity-0"
+                            className="dark:text-black text-white text-center text-md md:text-4xl opacity-0"
                             style={{
                                 filter: filter ? "blur(10px)" : "none",
                             }}

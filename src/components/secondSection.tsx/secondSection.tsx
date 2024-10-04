@@ -13,10 +13,10 @@ export default function SecondSection() {
                     <Image src='/assets/withoutWards.svg' width={50} height={50} alt="logo" className="w-[13vw]  h-[140px]" />
                 </div>
                 <FloatingComponent>
-                    <div className=" text-start shadow-2xl  shadow-black p-2 rounded-full  bg-white -rotate-[20deg]">
-                        <div className="custom-dashed-border px-1 w-[250px] text-[3.5vw] text-start ps-1 pe-3 text-black bg-white border-[1px] border-black font-bold flex flex-col items-center justify-evenly">
-                            <h1 className="w-full text-start ps-8">BEAST</h1>
-                            <h1 className="w-full text-start ps-8 -mt-7">DESIGN</h1>
+                    <div className=" text-start shadow-2xl h-[40px] sm:h-[80px] md:h-[135px] shadow-black p-1 md:p-2 rounded-full  bg-white -rotate-[20deg]">
+                        <div className="w-[22vw] text-[3.5vw] h-[33px] sm:h-[70px] md:h-[120px] text-start ps-0 md:ps-1 pe-3 text-black bg-white border-[1px] border-black border-dashed rounded-full font-bold flex flex-col items-center justify-evenly">
+                            <h1 className="w-full text-start ps-3 sm:ps-6 md:ps-8">BEAST</h1>
+                            <h1 className="w-full text-start ps-3 sm:ps-6 md:ps-8 -mt-2 sm:-mt-6 md:-mt-7">DESIGN</h1>
                         </div>
                     </div>
                 </FloatingComponent >
