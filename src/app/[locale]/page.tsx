@@ -3,6 +3,7 @@ import Navbar from '@/components/navbar/Navbar';
 import SecondSection from '@/components/secondSection.tsx/secondSection';
 import FourthSection from '@/components/fourthSection/FourthSection';
 import TheirdSection from '@/components/theirdSection.tsx/theirdSection';
+import FifthSection from '@/components/fifthSection/fifthSection';
 
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
             <SecondSection />
             <TheirdSection />
             <FourthSection />
+            <FifthSection />
         </div>
     );
 }

@@ -56,7 +56,7 @@ export const TextGenerateEffect = ({
         return (
             <motion.div
                 ref={scope}
-                className={`text-md md:text-2xl flex flex-row text-align w-[99%] md:w-[64%] lg:w-[51%] md:mx-auto lg:mx-auto justify-between items-center`}
+                className={`text-base md:text-2xl flex flex-row text-align w-[90%] md:w-[64%] lg:w-[51%] md:mx-auto lg:mx-auto justify-between items-center`}
             >
                 {wordsArray.map((word, idx) => {
                     return (
