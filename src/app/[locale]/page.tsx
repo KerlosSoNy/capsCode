@@ -8,7 +8,7 @@ import TheirdSection from '@/components/theirdSection.tsx/theirdSection';
 export default function HomePage() {
 
     return (
-        <div className=''>
+        <div className='overflow-x-hidden'>
             <Navbar />
             <SecondSection />
             <TheirdSection />

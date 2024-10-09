@@ -8,11 +8,13 @@ export const TextGenerateEffect = ({
     className,
     filter = true,
     duration = 0.5,
+    gap = '2'
 }: {
     words: string;
     className?: string;
     filter?: boolean;
     duration?: number;
+    gap?: string
 }) => {
     const [scope, animate] = useAnimate();
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -49,24 +51,26 @@ export const TextGenerateEffect = ({
             if (containerRef.current) observer.unobserve(containerRef.current);
         };
     }, [scope.current]);
-
+    console.log(gap)
     const renderWords = () => {
         return (
             <motion.div
                 ref={scope}
-                className="text-md md:text-2xl text-align w-[98%] md:w-[51%] mx-auto gap-2"
+                className={`text-md md:text-2xl flex flex-row text-align w-[99%] md:w-[64%] lg:w-[51%] md:mx-auto lg:mx-auto justify-between items-center`}
             >
                 {wordsArray.map((word, idx) => {
                     return (
-                        <motion.span
-                            key={word + idx}
-                            className="dark:text-black text-white text-center text-md md:text-4xl opacity-0"
-                            style={{
-                                filter: filter ? "blur(10px)" : "none",
-                            }}
-                        >
-                            {word}{" "}
-                        </motion.span>
+                        <div>
+                            <motion.span
+                                key={word + idx}
+                                className={`dark:text-black text-white text-center text-md md:text-4xl opacity-0`}
+                                style={{
+                                    filter: filter ? "blur(10px)" : "none",
+                                }}
+                            >
+                                {word}{" "}
+                            </motion.span>
+                        </div>
                     );
                 })}
             </motion.div>
