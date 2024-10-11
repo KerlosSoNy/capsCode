@@ -13,8 +13,8 @@ export default function SecondSection() {
                     <Image src='/assets/withoutWards.svg' width={50} height={50} alt="logo" className="w-[13vw]  h-[140px]" />
                 </div>
                 <FloatingComponent>
-                    <div className=" text-start shadow-2xl h-[40px] sm:h-[80px] md:h-[135px] shadow-black p-1 md:p-2 rounded-full  bg-white -rotate-[20deg]">
-                        <div className="w-[22vw] text-[3.5vw] h-[33px] sm:h-[70px] md:h-[120px] text-start ps-0 md:ps-1 pe-3 text-black bg-white border-[1px] border-black border-dashed rounded-full font-bold flex flex-col items-center justify-evenly">
+                    <div className=" text-start shadow-2xl h-[45px] sm:h-[80px] md:h-[135px] shadow-black p-1 md:p-2 rounded-full  bg-white -rotate-[20deg]">
+                        <div className="w-[22vw] text-[3.5vw] h-[37px] sm:h-[70px] md:h-[120px] text-start ps-0 md:ps-1 pe-3 text-black bg-white border-[1px] border-black border-dashed rounded-full font-bold flex flex-col items-center justify-evenly">
                             <h1 className="w-full text-start ps-3 sm:ps-6 md:ps-8">BEAST</h1>
                             <h1 className="w-full text-start ps-3 sm:ps-6 md:ps-8 -mt-2 sm:-mt-6 md:-mt-7">DESIGN</h1>
                         </div>
@@ -29,7 +29,7 @@ export default function SecondSection() {
                 <h1 className=" font-bold font-clash text-black">GET STARTED</h1>
                 <Image src='/assets/start.svg' width={50} height={50} alt="logo" className="w-[25px]  h-[140px] " />
             </button>
-            <div className="relative overflow-hidden w-[101vw] md:w-[99vw] -rotate-2 z-10 flex flex-row">
+            <div className="relative overflow-hidden w-[110vw] md:w-[99vw] -rotate-2 z-10 flex flex-row">
                 <ParallaxText baseVelocity={1}>
                     | &nbsp;&nbsp;&nbsp;&nbsp;
                     JavaScript &nbsp;&nbsp;&nbsp;&nbsp;
