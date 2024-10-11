@@ -2,18 +2,20 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 
+interface ContainerScrollProps {
+    titleComponent: string | React.ReactNode;
+    children: React.ReactNode;
+}
+
 export const ContainerScroll = ({
     titleComponent,
     children,
-}: {
-    titleComponent: string | React.ReactNode;
-    children: React.ReactNode;
-}) => {
-    const containerRef = useRef<any>(null);
+}: ContainerScrollProps) => {
+    const containerRef = useRef<HTMLDivElement | null>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
     });
-    const [isMobile, setIsMobile] = React.useState(false);
+    const [isMobile, setIsMobile] = React.useState<boolean>(false);
 
     React.useEffect(() => {
         const checkMobile = () => {
@@ -26,7 +28,7 @@ export const ContainerScroll = ({
         };
     }, []);
 
-    const scaleDimensions = () => {
+    const scaleDimensions = (): [number, number] => {
         return isMobile ? [0.7, 0.9] : [1.05, 1];
     };
 
@@ -54,7 +56,12 @@ export const ContainerScroll = ({
     );
 };
 
-export const Header = ({ translate, titleComponent }: any) => {
+interface HeaderProps {
+    translate: MotionValue<number>;
+    titleComponent: string | React.ReactNode;
+}
+
+export const Header = ({ translate, titleComponent }: HeaderProps) => {
     return (
         <motion.div
             style={{
@@ -67,23 +74,26 @@ export const Header = ({ translate, titleComponent }: any) => {
     );
 };
 
-export const Card = ({
-    rotate,
-    scale,
-    children,
-}: {
+interface CardProps {
     rotate: MotionValue<number>;
     scale: MotionValue<number>;
     translate: MotionValue<number>;
     children: React.ReactNode;
-}) => {
+}
+
+export const Card = ({
+    rotate,
+    scale,
+    translate,
+    children,
+}: CardProps) => {
     return (
         <motion.div
             style={{
                 rotateX: rotate,
                 scale,
                 boxShadow:
-                    "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
+                    `0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003 ${translate}`,
             }}
             className="max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full border-4 border-[#6C6C6C] p-2 md:p-6 bg-[#222222] rounded-[30px] shadow-2xl"
         >
