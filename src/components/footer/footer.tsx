@@ -15,6 +15,11 @@ export default function Footer() {
                         '/assets/Logo.png',
                         '/assets/Logo.png',
                         '/assets/Logo.png',
+                        '/assets/Logo.png',
+                        '/assets/Logo.png',
+                        '/assets/Logo.png',
+                        '/assets/Logo.png',
+                        '/assets/Logo.png',
                         '/assets/Logo.png', '/assets/Logo.png']}
                     baseVelocity={4}
                     bg="bg-mainColor"

@@ -4,8 +4,10 @@ import Link from 'next/link'
 import React from 'react'
 import MagneticComponent from '../Magnitc/Magnitc'
 import { StartButton } from '../Buttons/start'
+import { useLocale } from 'next-intl'
 
 export default function Navbar() {
+    const locale = useLocale()
     return (
         <div id='topOfPage' className='flex flex-col gap-2 bg-[#0053C6] '>
             <div className='container flex gap-3 md:gap-0 flex-row items-center justify-between h-[70px]'>
@@ -22,7 +24,7 @@ export default function Navbar() {
                         </Link>
                     </MagneticComponent>
                     <MagneticComponent >
-                        <Link href='/project' className='text-white text-[15px] font-bold'>
+                        <Link href={`/${locale}/projects`} className='text-white text-[15px] font-bold'>
                             PROJECT
                         </Link>
                     </MagneticComponent>
