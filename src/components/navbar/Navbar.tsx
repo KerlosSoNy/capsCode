@@ -7,7 +7,7 @@ import { StartButton } from '../Buttons/start'
 
 export default function Navbar() {
     return (
-        <div className='flex flex-col gap-2 bg-[#0053C6] '>
+        <div id='topOfPage' className='flex flex-col gap-2 bg-[#0053C6] '>
             <div className='container flex gap-3 md:gap-0 flex-row items-center justify-between h-[70px]'>
                 <Link href='/' className='hidden md:flex'>
                     <Image src='/assets/Logo.png' width={130} height={50} className='w-[150px] !h-[40px]' alt='logo' />

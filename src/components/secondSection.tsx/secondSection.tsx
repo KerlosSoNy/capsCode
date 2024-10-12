@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ParallaxText from "../sweaper/Sweaper";
 import FloatingComponent from "../floatingComponent/floatingComponent";
+import Link from "next/link";
 
 export default function SecondSection() {
     return (
@@ -23,12 +24,12 @@ export default function SecondSection() {
                 <h1 className="text-[11.7vw] -mt-16 md:-mt-20 lg:-mt-32 font-bold font-clash text-white">WITHCREATIVE</h1>
             </div>
             <p className="w-[90%] md:w-[60%] lg:w-[58%] text-white ms-3 md:ms-10 lg:ms-10">Welcome to CapsCode, where innovation meets creativity to deliver vibrant web and mobile UI/UX solutions. With over 3 years of experience, join us on a journey to discover the magic of unforgettable software development.</p>
-            <button
+            <Link href="mailto:CapsCodeEG@gmail.com"
                 className="bg-white relative gap-4 mt-8 mb-4 text-black flex flex-row items-center justify-center w-[200px] h-[50px] rounded-full ms-10 shadow-md shadow-black"
             >
                 <h1 className=" font-bold font-clash text-black">GET STARTED</h1>
                 <Image src='/assets/start.svg' width={50} height={50} alt="logo" className="w-[25px]  h-[140px] " />
-            </button>
+            </Link>
             <div className="relative overflow-hidden w-[110vw] md:w-[99vw] -rotate-2 z-10 flex flex-row">
                 <ParallaxText baseVelocity={1}>
                     | &nbsp;&nbsp;&nbsp;&nbsp;

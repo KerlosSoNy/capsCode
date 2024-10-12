@@ -14,9 +14,10 @@ import { wrap } from "@motionone/utils";
 interface ParallaxProps {
     children: React.ReactNode; // Replace `any` with `React.ReactNode`
     baseVelocity: number;
+    bg?: string | undefined
 }
 
-export default function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
+export default function ParallaxText({ children, baseVelocity = 100, bg }: ParallaxProps) {
     const baseX = useMotionValue(0);
     const { scrollY } = useScroll();
     const scrollVelocity = useVelocity(scrollY);
@@ -46,7 +47,7 @@ export default function ParallaxText({ children, baseVelocity = 100 }: ParallaxP
     });
 
     return (
-        <div className="parallax py-5 my-auto !bg-white">
+        <div className={`parallax py-5 my-auto ${bg ? `${bg} text-white` : '!bg-white text-black'}`}>
             <motion.div className="scroller" style={{ x }}>
                 <span>{children}</span>
                 <span>{children}</span>

@@ -51,7 +51,6 @@ export const TextGenerateEffect = ({
             if (containerRef.current) observer.unobserve(containerRef.current);
         };
     }, [scope.current]);
-    console.log(gap)
     const renderWords = () => {
         return (
             <motion.div

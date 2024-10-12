@@ -29,7 +29,9 @@
     background: white;
     border: none
   }
-  
+  html {
+    scroll-behavior: smooth;
+  }
   .custom-dashed-border::before {
     content: '';
     position: absolute;
