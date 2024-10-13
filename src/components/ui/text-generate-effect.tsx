@@ -8,13 +8,11 @@ export const TextGenerateEffect = ({
     className,
     filter = true,
     duration = 0.5,
-    gap = '2'
 }: {
     words: string;
     className?: string;
     filter?: boolean;
     duration?: number;
-    gap?: string
 }) => {
     const [scope, animate] = useAnimate();
     const containerRef = useRef<HTMLDivElement | null>(null);
