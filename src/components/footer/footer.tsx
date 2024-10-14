@@ -1,8 +1,10 @@
 import React from 'react'
 import ParallaxImage from '../parallexImages/parallexImages'
 import Link from 'next/link'
+import { getLocale } from 'next-intl/server'
 
-export default function Footer() {
+export default async function Footer() {
+    const locale = await getLocale()
     return (
         <div className='bg-mainColor relative overflow-hidden flex flex-col gap-20 pb-40'>
             <div className='font-light py-2'>
@@ -37,9 +39,9 @@ export default function Footer() {
                 <div className='flex flex-row items-start gap-6 text-white'>
                     <h1 className='text-2xl font-bold text-white'>Special Links :</h1>
                     <div className='flex flex-col gap-3 pt-1'>
-                        <Link href='#topOfPage'>Home</Link>
-                        <Link href='/service'>Service</Link>
-                        <Link href='/about-us'>About us</Link>
+                        <Link className='hover:cursor-pointer' href='#topOfPage'>Home</Link>
+                        <Link className='hover:cursor-pointer' href={`/${locale}/services`}>Service</Link>
+                        <Link className='hover:cursor-pointer' href={`/${locale}/about-us`}>About us</Link>
                     </div>
                 </div>
                 <div className='flex flex-row gap-6 text-white'>
