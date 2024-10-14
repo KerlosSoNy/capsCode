@@ -52,7 +52,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='flex absolute justify-center flex-row text-[18.5vw] font-bold -bottom-16 sm:-bottom-24 md:-bottom-28 lg:-bottom-40'>
+            <div className='flex absolute justify-center flex-row text-[19.5vw] font-bold -bottom-16 sm:-bottom-24 md:-bottom-28 lg:-bottom-40'>
                 <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-mainColor to-neutral-300 border-white'>CAPS</h1>
                 <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-mainColor to-neutral-300 border-white'>CO</h1>
                 <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-mainColor to-neutral-300 border-white'>DE</h1>

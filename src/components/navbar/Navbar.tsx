@@ -9,7 +9,7 @@ import { useLocale } from 'next-intl'
 export default function Navbar() {
     const locale = useLocale()
     return (
-        <div id='topOfPage' className='flex flex-col gap-2 bg-[#0053C6] '>
+        <div id='topOfPage' className='flex z-[1000] flex-col gap-2 bg-[#0053C6] '>
             <div className='container flex gap-3 md:gap-0 flex-row items-center justify-between h-[70px]'>
                 <Link href='/' className='hidden md:flex'>
                     <Image src='/assets/Logo.png' width={130} height={50} className='w-[150px] !h-[40px]' alt='logo' />
@@ -19,7 +19,7 @@ export default function Navbar() {
                 </Link>
                 <div className='md:hidden hidden lg:flex flex-row items-center justify-between w-[30%]'>
                     <MagneticComponent >
-                        <Link href='/about-us' className='text-white text-[15px] font-bold'>
+                        <Link href={`/${locale}/about-us`} className='text-white text-[15px] font-bold'>
                             ABOUT
                         </Link>
                     </MagneticComponent>
@@ -29,7 +29,7 @@ export default function Navbar() {
                         </Link>
                     </MagneticComponent>
                     <MagneticComponent >
-                        <Link href='/contact-us' className='text-white text-[15px] font-bold'>
+                        <Link href={`/${locale}/contact-us`} className='text-white text-[15px] font-bold'>
                             CONTACT US
                         </Link>
                     </MagneticComponent>
