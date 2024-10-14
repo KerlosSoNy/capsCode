@@ -13,9 +13,8 @@ export const WavyBackground = ({
     blur = 10,
     speed = "fast",
     waveOpacity = 0.5,
-    ...props
 }: {
-    children?: any;
+    children?: React.ReactNode;
     className?: string;
     containerClassName?: string;
     colors?: string[];
@@ -24,7 +23,6 @@ export const WavyBackground = ({
     blur?: number;
     speed?: "slow" | "fast";
     waveOpacity?: number;
-    [key: string]: any;
 }) => {
     const noise = createNoise3D();
     let w: number,
@@ -32,8 +30,10 @@ export const WavyBackground = ({
         nt: number,
         i: number,
         x: number,
-        ctx: any,
-        canvas: any;
+        // @typescript-eslint/ban-ts-comment 
+        ctx: CanvasRenderingContext2D,
+        // @typescript-eslint/ban-ts-comment
+        canvas: HTMLCanvasElement | null;
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const getSpeed = () => {
         switch (speed) {
@@ -48,7 +48,8 @@ export const WavyBackground = ({
 
     const init = () => {
         canvas = canvasRef.current;
-        ctx = canvas.getContext("2d");
+        // @ts-expect-error
+        ctx = canvas && canvas.getContext("2d");
         w = ctx.canvas.width = window.innerWidth;
         h = ctx.canvas.height = window.innerHeight;
         ctx.filter = `blur(${blur}px)`;
@@ -75,8 +76,8 @@ export const WavyBackground = ({
             ctx.lineWidth = waveWidth || 50;
             ctx.strokeStyle = waveColors[i % waveColors.length];
             for (x = 0; x < w; x += 5) {
-                var y = noise(x / 800, 0.3 * i, nt) * 100;
-                ctx.lineTo(x, y + h * 0.5); // adjust for height, currently at 50% of the container
+                const y = noise(x / 800, 0.3 * i, nt) * 100;
+                ctx.lineTo(x, y + h * 0.5);
             }
             ctx.stroke();
             ctx.closePath();
@@ -124,7 +125,7 @@ export const WavyBackground = ({
                     ...(isSafari ? { filter: `blur(${blur}px)` } : {}),
                 }}
             ></canvas>
-            <div className={cn("relative z-10", className)} {...props}>
+            <div className={cn("relative z-10", className)}>
                 {children}
             </div>
         </div>

@@ -3,9 +3,10 @@ import React from 'react'
 import toast from 'react-hot-toast';
 
 export default function FormContactUs() {
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement> | any) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const formData = new FormData(event.target);
+        const form = event.target as HTMLFormElement;
+        const formData = new FormData(event.target as HTMLFormElement);
 
         formData.append("access_key", "fc90e1e7-4304-4914-819b-32abc364d61a");
 
@@ -24,7 +25,7 @@ export default function FormContactUs() {
         if (result.success) {
             toast.success("Thank you for your message!");
         }
-        event.target.reset();
+        form.reset();
     }
     return (
         <div className="flex flex-wrap justify-between items-center h-auto p-5 pl-[6%]">

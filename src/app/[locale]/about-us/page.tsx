@@ -1,7 +1,4 @@
-import { HeroParallax } from '@/components/ui/hero-parallax'
 import { TypewriterEffect } from '@/components/ui/typewriter-effect';
-import { WavyBackground } from '@/components/ui/wavy-background'
-import { title } from 'process'
 import React from 'react'
 
 export default function AboutUS() {
