@@ -38,17 +38,17 @@ export default function Navbar() {
             </div>
             <div className='md:flex flex lg:hidden flex-row items-center justify-between container'>
                 <MagneticComponent >
-                    <Link href='/about-us' className='text-white text-[15px] font-bold'>
+                    <Link href={`/${locale}/about-us`} className='text-white text-[15px] font-bold'>
                         ABOUT
                     </Link>
                 </MagneticComponent>
                 <MagneticComponent >
-                    <Link href='/project' className='text-white text-[15px] font-bold'>
+                    <Link href={`/${locale}/projects`} className='text-white text-[15px] font-bold'>
                         PROJECT
                     </Link>
                 </MagneticComponent>
                 <MagneticComponent >
-                    <Link href='/contact-us' className='text-white text-[15px] font-bold'>
+                    <Link href={`/${locale}/contact-us`} className='text-white text-[15px] font-bold'>
                         CONTACT US
                     </Link>
                 </MagneticComponent>
