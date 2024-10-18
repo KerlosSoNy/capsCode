@@ -1,6 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import { Head } from 'next/document';
 
 export default async function LocaleLayout({
     children,
@@ -13,8 +12,9 @@ export default async function LocaleLayout({
 
     return (
         <html lang={locale}>
-            <Head>
-                <meta name="google-site-verification" content="ymYfjvSdKiU-l4BrhY98KgFhOGRcRpehbUUsIKvpaW8" />            </Head>
+            <head>
+                <meta name="google-site-verification" content="ymYfjvSdKiU-l4BrhY98KgFhOGRcRpehbUUsIKvpaW8" />
+            </head>
             <body>
                 <NextIntlClientProvider messages={messages}>
                     {children}
