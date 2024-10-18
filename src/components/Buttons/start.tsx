@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CodeIcon, CoffeeIcon, HelpingHandIcon, PersonStandingIcon } from "lucide-react";
+import Link from "next/link";
 
 export function StartButton() {
     const images = [
@@ -103,9 +104,9 @@ export function StartButton() {
                         </div>
                     </ModalContent>
                     <ModalFooter className="gap-4">
-                        <button className="bg-mainColor text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-mainColor w-28">
+                        <Link href="mailto:capscodeeg.info@gmail.com" className="bg-mainColor text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-mainColor w-28">
                             Start Now
-                        </button>
+                        </Link>
                     </ModalFooter>
                 </ModalBody>
             </Modal>

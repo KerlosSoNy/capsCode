@@ -32,7 +32,7 @@ export default async function Footer() {
                     <h1 className='text-2xl font-bold text-white'>Get in touch :</h1>
                     <div className='flex flex-col gap-3 pt-1'>
                         <span>{'123 Maadi , Cairo ,EG'}</span>
-                        <Link href="mailto:CapsCodeEG@gmail.com">CapsCodeEG@gmail.com</Link>
+                        <Link href="mailto:capscodeeg.info@gmail.com">CapsCodeEG@gmail.com</Link>
                         <Link href="tel:+201010811806">+20 101 081 1806</Link>
                     </div>
                 </div>

@@ -53,7 +53,7 @@ export default function LastSection() {
                 <h1 className='text-[5vw] my-auto font-bold text-black'>
                     TOGETHER
                 </h1>
-                <Link href="mailto:CapsCodeEG@gmail.com"
+                <Link href="mailto:capscodeeg.info@gmail.com"
                     type='button'
                     className="bg-white relative gap-4 mt-4 md:mt-8 mb-4 text-black flex flex-row items-center justify-center w-[200px] h-[50px] rounded-full ms-10 shadow-md shadow-black text-sm"
                 >
