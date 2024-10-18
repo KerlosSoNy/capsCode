@@ -2,14 +2,17 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+export default withNextIntl({
+  siteUrl: 'https://caps-code.vercel.app',
+  generateRobotsTxt: true,
+
+  /** @type {import('next').NextConfig} */
+  nextConfig: {
     images: {
-        domains: ['images.unsplash.com'],
+      domains: ['images.unsplash.com'],
     },
     typescript: {
-        ignoreBuildErrors: true,
+      ignoreBuildErrors: true,
     },
-};
-
-export default withNextIntl(nextConfig);
+  },
+});

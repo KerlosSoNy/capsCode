@@ -1,5 +1,31 @@
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { FlipWords } from "@/components/ui/flip-words";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    metadataBase: new URL("https://caps-code.vercel.app/en/services"),
+    title: {
+        default: "CapsCode",
+        template:
+            "%s | Services - Our Services",
+    },
+    description:
+        "At Caps Code, we offer a comprehensive range of web development services tailored to meet your business needs. From custom website design and e-commerce solutions to responsive applications and SEO optimization, our expert team is dedicated to delivering high-quality, user-friendly solutions that drive results. Partner with us to transform your digital presence and achieve your goals!",
+    openGraph: {
+        title: "CapsCode",
+        description:
+            "At Caps Code, we offer a comprehensive range of web development services tailored to meet your business needs. From custom website design and e-commerce solutions to responsive applications and SEO optimization, our expert team is dedicated to delivering high-quality, user-friendly solutions that drive results. Partner with us to transform your digital presence and achieve your goals!",
+        type: "website",
+        locale: "en_US",
+        url: "https://caps-code.vercel.app/en",
+        siteName: "CapsCode",
+    },
+    icons: {
+        icon: "/assets/withoutWards.png",
+        shortcut: "/assets/withoutWards.png",
+    },
+};
+
 
 export default function page() {
     const items = [
