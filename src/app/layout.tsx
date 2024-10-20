@@ -44,6 +44,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/assets/withoutWards.png" type="image/x-icon" />
+        <meta property="og:image" content="/assets/withoutWards.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              url: "https://caps-code.vercel.app/en",
+              logo: "https://caps-code.vercel.app/assets/withoutWards.png", // Full URL to the logo
+            }),
+          }}
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&display=swap"
           rel="stylesheet"
