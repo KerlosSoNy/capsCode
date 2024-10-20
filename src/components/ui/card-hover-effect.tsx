@@ -1,7 +1,6 @@
 'use client'
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 
 export const HoverEffect = ({
@@ -26,6 +25,7 @@ export const HoverEffect = ({
         >
             {items.map((item, idx) => (
                 <span
+                    key={idx}
                     className="relative group  block p-2 h-full w-full"
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
