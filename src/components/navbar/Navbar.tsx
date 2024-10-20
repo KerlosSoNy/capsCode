@@ -33,6 +33,11 @@ export default function Navbar() {
                             CONTACT US
                         </Link>
                     </MagneticComponent>
+                    <MagneticComponent >
+                        <Link href={`/${locale}/services`} className='text-white text-[15px] font-bold'>
+                            SERVICES
+                        </Link>
+                    </MagneticComponent>
                 </div>
                 <StartButton />
             </div>
@@ -50,6 +55,11 @@ export default function Navbar() {
                 <MagneticComponent >
                     <Link href={`/${locale}/contact-us`} className='text-white text-[15px] font-bold'>
                         CONTACT US
+                    </Link>
+                </MagneticComponent>
+                <MagneticComponent >
+                    <Link href={`/${locale}/services`} className='text-white text-[15px] font-bold'>
+                        SERVICES
                     </Link>
                 </MagneticComponent>
             </div>
