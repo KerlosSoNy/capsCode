@@ -17,7 +17,7 @@ export default function Navbar() {
                 <Link href='/' className='flex md:hidden'>
                     <Image src='/assets/withoutWards.svg' width={130} height={50} className='w-[150px] !h-[40px]' alt='logo' />
                 </Link>
-                <div className='md:hidden hidden lg:flex flex-row items-center justify-between w-[30%]'>
+                <div className='md:hidden hidden lg:flex flex-row items-center justify-between w-[35%]'>
                     <MagneticComponent >
                         <Link href={`/${locale}/about-us`} className='text-white text-[15px] font-bold'>
                             ABOUT
@@ -43,22 +43,22 @@ export default function Navbar() {
             </div>
             <div className='md:flex flex lg:hidden flex-row items-center justify-between container'>
                 <MagneticComponent >
-                    <Link href={`/${locale}/about-us`} className='text-white text-[15px] font-bold'>
+                    <Link href={`/${locale}/about-us`} className='text-white text-[12px] font-bold'>
                         ABOUT
                     </Link>
                 </MagneticComponent>
                 <MagneticComponent >
-                    <Link href={`/${locale}/projects`} className='text-white text-[15px] font-bold'>
+                    <Link href={`/${locale}/projects`} className='text-white text-[12px] font-bold'>
                         PROJECT
                     </Link>
                 </MagneticComponent>
                 <MagneticComponent >
-                    <Link href={`/${locale}/contact-us`} className='text-white text-[15px] font-bold'>
+                    <Link href={`/${locale}/contact-us`} className='text-white text-[12px] font-bold'>
                         CONTACT US
                     </Link>
                 </MagneticComponent>
                 <MagneticComponent >
-                    <Link href={`/${locale}/services`} className='text-white text-[15px] font-bold'>
+                    <Link href={`/${locale}/services`} className='text-white text-[12px] font-bold'>
                         SERVICES
                     </Link>
                 </MagneticComponent>

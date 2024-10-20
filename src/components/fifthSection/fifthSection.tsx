@@ -17,7 +17,7 @@ export default function FifthSection() {
     return (
         <div className="my-10 flex flex-col container mx-auto">
             <div className="flex flex-row  mb-5 items-center flex-wrap justify-center md:justify-between">
-                <div className="text-[8vw] font-bold font-clash flex flex-row flex-wrap gap-2">
+                <div className="text-[8vw] font-bold font-clash flex flex-row justify-center flex-wrap gap-2">
                     <span>OUR BEST</span>
                     <span className="text-mainColor">WORK</span>
                 </div>
