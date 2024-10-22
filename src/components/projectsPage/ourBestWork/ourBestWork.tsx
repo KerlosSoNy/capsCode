@@ -15,7 +15,7 @@ export default function OurBestWorks() {
     )
 
     return (
-        <div className="py-10 flex flex-col container mx-auto bg-mainColor shadow-lg">
+        <div className="py-10 flex flex-col container mx-auto bg-mainColor">
             <div className="flex flex-row  mb-5 items-center flex-wrap justify-center md:justify-between " >
                 <div className="text-[8vw] font-bold font-clash flex flex-row flex-wrap gap-2">
                     <span className="text-white">OUR BEST</span>
