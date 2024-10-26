@@ -46,6 +46,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/assets/withoutWards.png" type="image/x-icon" />
         <meta property="og:image" content="/assets/withoutWards.png" />
+        <meta name="google-site-verification" content="ymYfjvSdKiU-l4BrhY98KgFhOGRcRpehbUUsIKvpaW8" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
