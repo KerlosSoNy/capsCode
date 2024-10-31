@@ -28,7 +28,7 @@ export default async function Footer() {
                 />
             </div>
             <div className="flex flex-col gap-4 items-start ps-10 md:ps-0 justify-around flex-wrap md:flex-row">
-                <div className='flex flex-row items-start justify-start gap-6 text-white'>
+                <div className='flex flex-row items-start justify-start gap-6 text-white z-[1000]'>
                     <h1 className='text-2xl font-bold text-white'>Get in touch :</h1>
                     <div className='flex flex-col gap-3 pt-1'>
                         <span>{'123 Maadi , Cairo ,EG'}</span>
@@ -36,7 +36,7 @@ export default async function Footer() {
                         <Link href="tel:+201010811806">+20 101 081 1806</Link>
                     </div>
                 </div>
-                <div className='flex flex-row items-start gap-6 text-white'>
+                <div className='flex flex-row items-start gap-6 text-white z-[1000]'>
                     <h1 className='text-2xl font-bold text-white'>Special Links :</h1>
                     <div className='flex flex-col gap-3 pt-1'>
                         <Link className='hover:cursor-pointer' href='#topOfPage'>Home</Link>
@@ -44,7 +44,7 @@ export default async function Footer() {
                         <Link className='hover:cursor-pointer' href={`/${locale}/about-us`}>About us</Link>
                     </div>
                 </div>
-                <div className='flex flex-row gap-6 text-white'>
+                <div className='flex flex-row gap-6 text-white z-[1000]'>
                     <h1 className='text-2xl font-bold '>Company :</h1>
                     <div className='flex flex-col pt-1 gap-3'>
                         <Link href='https://www.facebook.com/p/capscode-61567515213356/' target='_blank'>Facebook</Link>
