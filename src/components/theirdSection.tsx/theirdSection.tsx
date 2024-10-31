@@ -36,7 +36,7 @@ const cards = cardsData.map((card, index) => (
 export default function TheirdSection() {
     return (
         <div
-            className="w-full bg-white text-black mt-32">
+            className="w-full bg-white text-black mt-32 mb-10">
             <div className="container mx-auto flex flex-col">
                 <div className="flex flex-col md:flex-row items-center justify-between">
                     <div className="flex flex-col">

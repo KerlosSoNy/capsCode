@@ -47,10 +47,10 @@ export default async function Footer() {
                 <div className='flex flex-row gap-6 text-white'>
                     <h1 className='text-2xl font-bold '>Company :</h1>
                     <div className='flex flex-col pt-1 gap-3'>
-                        <span>Facebook</span>
-                        <span>Instagram</span>
-                        <span>LinkedIn</span>
-                        <span>E-Mail</span>
+                        <Link href='https://www.facebook.com/p/capscode-61567515213356/' target='_blank'>Facebook</Link>
+                        <Link href='https://www.instagram.com/capscode.eg/' target='_blank'>Instagram</Link>
+                        <Link href='https://www.linkedin.com/company/capscodeeg' target='_blank'>LinkedIn</Link>
+                        <Link href='mailto:capscodeeg.info@gmail.com' target='_blank'>E-Mail</Link>
                     </div>
                 </div>
             </div>

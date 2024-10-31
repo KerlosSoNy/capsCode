@@ -7,10 +7,15 @@ import React, {
     useContext,
 } from "react";
 import {
-    IconX,
+    IconArrowNarrowLeft,
+    IconArrowNarrowRight,
+    // IconX,
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
+import {
+    //  AnimatePresence,
+    motion
+} from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
 
@@ -36,8 +41,8 @@ export const CarouselContext = createContext<{
 
 export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
     const carouselRef = React.useRef<HTMLDivElement>(null);
-    const [, setCanScrollLeft] = React.useState(false);
-    const [, setCanScrollRight] = React.useState(true);
+    const [canScrollLeft, setCanScrollLeft] = React.useState(false);
+    const [canScrollRight, setCanScrollRight] = React.useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -55,17 +60,17 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         }
     };
 
-    // const scrollLeft = () => {
-    //     if (carouselRef.current) {
-    //         carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
-    //     }
-    // };
+    const scrollLeft = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
+        }
+    };
 
-    // const scrollRight = () => {
-    //     if (carouselRef.current) {
-    //         carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
-    //     }
-    // };
+    const scrollRight = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
+        }
+    };
 
     const handleCardClose = (index: number) => {
         if (carouselRef.current) {
@@ -130,6 +135,25 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                         ))}
                     </div>
                 </div>
+                <div className="flex justify-end gap-2 mr-10">
+                    <button
+                        title="button"
+
+                        className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+                        onClick={scrollLeft}
+                        disabled={!canScrollLeft}
+                    >
+                        <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
+                    </button>
+                    <button
+                        title="button"
+                        className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+                        onClick={scrollRight}
+                        disabled={!canScrollRight}
+                    >
+                        <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
+                    </button>
+                </div>
             </div>
         </CarouselContext.Provider>
     );
@@ -146,7 +170,9 @@ export const Card = ({
 }) => {
     const [open, setOpen] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
-    const { onCardClose } = useContext(CarouselContext);
+    const { onCardClose,
+        // currentIndex
+    } = useContext(CarouselContext);
 
     useEffect(() => {
         function onKeyDown(event: KeyboardEvent) {
@@ -167,9 +193,9 @@ export const Card = ({
 
     useOutsideClick(containerRef, () => handleClose());
 
-    const handleOpen = () => {
-        setOpen(true);
-    };
+    // const handleOpen = () => {
+    //     setOpen(true);
+    // };
 
     const handleClose = () => {
         setOpen(false);
@@ -178,7 +204,7 @@ export const Card = ({
 
     return (
         <>
-            <AnimatePresence>
+            {/* <AnimatePresence>
                 {open && (
                     <div className="fixed inset-0 h-screen z-50 overflow-auto">
                         <motion.div
@@ -196,7 +222,8 @@ export const Card = ({
                             className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
                         >
                             <button
-                                title="try"
+                                title="button"
+
                                 className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
                                 onClick={handleClose}
                             >
@@ -218,10 +245,10 @@ export const Card = ({
                         </motion.div>
                     </div>
                 )}
-            </AnimatePresence>
+            </AnimatePresence> */}
             <motion.button
                 layoutId={layout ? `card-${card.title}` : undefined}
-                onClick={handleOpen}
+                // onClick={handleOpen}
                 className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
             >
                 <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
