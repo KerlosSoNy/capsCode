@@ -4,25 +4,31 @@ const cardsData = [
     {
         src: "/assets/089A0394-1.JPG", // Path to the image
         title: "UI/UX Design",
-        category: "Our best",
+        category: "Fathy Tamer",
         content: <p>This is a beautiful landscape description.</p>, // You can pass any JSX
     },
     {
         src: "/assets/kero.webp",
         title: "Frontend Developer",
-        category: "Our best",
+        category: "Kerlos Magdy",
         content: <p>Kerlos , the team lead of all projects and the leader of the team.</p>,
     },
     {
         src: "/assets/ziad.png",
         title: "Backend Developer",
-        category: "Our best",
+        category: "Ziad Badr",
         content: <p>Enjoy an exciting mountain adventure!</p>,
     },
     {
         src: "/assets/felox.jpeg",
         title: "Markting",
-        category: "Our best",
+        category: "Philopater George",
+        content: <p>Philopater , the team lead of all projects and the leader of the team.</p>,
+    },
+    {
+        src: "/assets/adel.png",
+        title: "Sales Manager",
+        category: "Adel Alaa",
         content: <p>Philopater , the team lead of all projects and the leader of the team.</p>,
     },
 ];
