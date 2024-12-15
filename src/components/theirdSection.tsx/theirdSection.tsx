@@ -21,7 +21,7 @@ const cardsData = [
     },
     {
         src: "/assets/felox.jpeg",
-        title: "Markting",
+        title: "Marketing",
         category: "Philopater George",
         content: <p>Philopater , the team lead of all projects and the leader of the team.</p>,
     },

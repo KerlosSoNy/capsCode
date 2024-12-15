@@ -249,10 +249,10 @@ export const Card = ({
             <motion.button
                 layoutId={layout ? `card-${card.title}` : undefined}
                 // onClick={handleOpen}
-                className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
+                className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-end relative z-10"
             >
-                <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-                <div className="relative z-40 p-8">
+                <div className="absolute h-full bottom-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
+                <div className="relative z-40 p-8 bg-gradient-to-b from-black/5 via-black/30 to-black/50 w-full">
                     <motion.p
                         layoutId={layout ? `category-${card.category}` : undefined}
                         className="text-white text-sm md:text-base font-medium font-sans text-left"
